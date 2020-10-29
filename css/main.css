@@ -2042,6 +2042,11 @@ input.num-product::-webkit-inner-spin-button {
 [ Block2 ]*/
 .block2-pic {
   position: relative;
+
+}
+.card__pic{
+  width: 100%;
+  object-fit: contain;
 }
 
 .block2-btn {
