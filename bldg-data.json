@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "name":"Bathroom",
+        "parent_id":"0"
+    },
+    {
+        "id":"2",
+        "name":"Bore Hole and Plumbing",
+        "parent_id":"0"
+    },
+    {
+        "id":"3",
+        "name":"Bore Hole and Plumbing",
+        "parent_id":"0"
+    },
+    {
+        "id":"4",
+        "name":"Basines & Vanities",
+        "parent_id":"Bathroom"
+    }
+]
