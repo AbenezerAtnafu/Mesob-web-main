@@ -39,6 +39,7 @@
 <body class="animsition">
 	
 	<!-- Header -->
+	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
@@ -50,10 +51,11 @@
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
-                        </a>
-                        
+
+						<a href="./login.html" class="flex-c-m trans-04 p-lr-25">
+							Login as Admin
+						</a>
+
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							EN
 						</a>
@@ -67,7 +69,7 @@
 					
 					<!-- Logo desktop -->		
 					<a href="#" class="logo">
-						<img src="images/icons/logo.png" alt="IMG-LOGO">
+						<img src="images/logos/logo-1.jpg" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -75,37 +77,28 @@
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.html">Home</a>
-								<!-- <ul class="sub-menu">
-									<li><a href="index.html">Cars</a></li>
-									<li><a href="home-02.html">Building Supplies </a></li>
-									<li><a href="home-03.html">Machienry Items</a></li>
-									<li><a href="home-03.html">Property Sales</a></li>
-								</ul> -->
 							</li>
 
 							<li>
 								<a href="vechile-product.html">Cars</a>
 							</li>
 
-							<li class="label1" data-label1="Sold">
-								<a href="shoping-cart.html">Building Supplies</a>
+							<li>
+								<a href="./bldg-product.html">Building Supplies</a>
 							</li>
 
 							<li>
-								<a href="blog.html">Machienry Items</a>
+								<a href="./mach-product.html">Machienry</a>
 							</li>
 
 							<li>
-								<a href="blog.html">Property Sales and Rentals</a>
+								<a href="./prop-product.html">Property Sales and Rentals</a>
 							</li>
 
 							<li>
 								<a href="about.html">About</a>
 							</li>
 
-							<li>
-								<a href="contact.html">Contact us</a>
-							</li>
 						</ul>
 					</div>	
 
@@ -123,7 +116,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.html"><img src="images/logos/logo-1.jpg" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -154,8 +147,9 @@
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help
+
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
+							Login as Admin
 						</a>
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
@@ -168,14 +162,7 @@
 			<ul class="main-menu-m">
 				<li>
 					<a href="index.html">Home</a>
-					<!-- <ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul>
-					<span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span> -->
+					
 				</li>
 
 				<li>
@@ -183,23 +170,19 @@
 				</li>
 
 				<li>
-					<a href="shoping-cart.html" >Building Supplies</a>
+					<a href="bldg-product.html" >Building Supplies</a>
 				</li>
 
 				<li>
-					<a href="blog.html">Machienry Items</a>
+					<a href="./mach-product.html">Machienry Items</a>
 				</li>
 
 				<li>
-					<a href="blog.html">Property Sales and Rentals</a>
+					<a href="./prop-product.html">Property Sales and Rentals</a>
 				</li>
 
 				<li>
-					<a href="about.html">About</a>
-				</li>
-
-				<li>
-					<a href="contact.html">Contact</a>
+					<a href="./about.html">About</a>
 				</li>
 			</ul>
 		</div>
@@ -227,17 +210,17 @@
         <!-- Add items -->
         <div class="p-b-10 p-l-50">
             <h3 class="ltext-103 cl5">
-                Add Products
+                Add your Products here
             </h3>
         </div>
 
         <!-- nav -->
 
-        <div class="bor10 m-t-50 p-t-43 p-b-40">
+        <div class="bor19 m-t-50  p-b-40  bg6">
             <!-- Tab01 -->
             <div class="tab01">
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs p-t-50" role="tablist">
                     <li class="nav-item p-b-10">
                         <a class="nav-link active" data-toggle="tab" href="#vechiles" role="tab">Vechiles</a>
                     </li>
@@ -321,15 +304,27 @@
                                                 <div class="dropDownSelect2"></div>
                                             </div>
                                         </div>
+
+                                        <!-- Condition -->
+                                        <div class="size-204 respon6-next pb-3">
+                                            <div id="modelList" class="rs1-select2 bor8 bg0">
+                                                <select id="modelSelect" class="js-select2" name="model">
+                                                    <option value="" >Slightly Used</option>
+                                                    <option value="" >New</option>
+                                                    <option value="" >Used</option>
+                                                </select>
+                                                <div class="dropDownSelect2"></div>
+                                            </div>
+                                        </div>
         
                                         <!-- color -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-114 " type="text" name="car-color" placeholder="Color">
+                                        <div class=" size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="car-color" placeholder="  Color">
                                         </div>
         
                                         <!-- price -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="car-color" placeholder="Price">
+                                        <div class="size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="car-color" placeholder="  Price">
                                         </div>
         
         
@@ -459,10 +454,22 @@
                                                 <div class="dropDownSelect2"></div>
                                             </div>
                                         </div>
+
+                                        <!-- process -->
+                                        <div class="size-204 respon6-next pb-3">
+                                            <div id="modelList" class="rs1-select2 bor8 bg0">
+                                                <select id="modelSelect" class="js-select2" name="model">
+                                                    <option value="" >Available</option>
+                                                    <option value="" >Is Sold</option>
+                                                    <option value="" >On Process</option>
+                                                </select>
+                                                <div class="dropDownSelect2"></div>
+                                            </div>
+                                        </div>
         
                                         <!-- millage -->
-                                        <div class=" p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-114 " type="text" name="car-color" placeholder="Mileage in KM">
+                                        <div class=" size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="mileage" placeholder="  Mileage in KM">
                                         </div>
         
                                         <!-- pricing -->
@@ -640,8 +647,8 @@
                                         </div>
         
                                         <!-- price -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="price" placeholder="Price">
+                                        <div class=" size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="price" placeholder="  Price">
                                         </div>
 
                                         <!-- Condition -->
@@ -833,13 +840,14 @@
                                         </div>
         
                                         <!-- price -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="price" placeholder="Price">
+                                        
+                                        <div class="size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="price" placeholder="  Price">
                                         </div>
 
                                         <!-- nuber of bedrooms -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="price" placeholder="Number of bedrooms">
+                                        <div class="size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="price" placeholder="  Number of bedrooms">
                                         </div>
 
                                         <!-- process -->
@@ -940,14 +948,14 @@
                                         </div>
 
                                         <!-- nuber of bathrooms -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="price" placeholder="Number of bathrooms">
+                                        <div class=" size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="price" placeholder="  Number of bathrooms">
                                         </div>
 
                                         <!-- sq.ft -->
                                         <!-- nuber of bedrooms -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="price" placeholder="Square Feet">
+                                        <div class="size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="price" placeholder="  Square Feet">
                                         </div>
         
                                         
@@ -1000,14 +1008,14 @@
                                     <div class="col-sm-6 col-md-4 col-lg-6 p-l-50">
 
                                         <!-- mach nname -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="name" placeholder="Machinery Name">
+                                        <div class=" size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="name" placeholder="  Machinery Name">
                                         </div>
         
         
                                         <!-- price -->
-                                        <div class="p-l-10 size-204 respon6-next pb-3">
-                                            <input class="mtext-107 cl2 size-50 " type="text" name="price" placeholder="Price">
+                                        <div class="size-204 respon6-next pb-3">
+                                            <input class="mtext-107 cl2 size-114 " type="text" name="price" placeholder="  Price">
                                         </div>
 
                                         <!-- process -->
@@ -1359,9 +1367,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 html_code += '<option value="'+value.name+'">'+value.name+'</option>';
                             }
                         }else{
+                            
                             if(value.parent_id == parent_id){
+                                
                                 html_code += '<option value="'+value.name+'">'+value.name+'</option>';
                             }
+                        
                         }
                         
 
