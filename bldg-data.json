@@ -1,22 +1,252 @@
 [
     {
-        "id":"1",
+        "id":"bath",
         "name":"Bathroom",
         "parent_id":"0"
     },
     {
-        "id":"2",
+        "id":"bore",
         "name":"Bore Hole and Plumbing",
         "parent_id":"0"
     },
     {
-        "id":"3",
-        "name":"Bore Hole and Plumbing",
+        "id":"bldg",
+        "name":"Building Materials",
         "parent_id":"0"
     },
     {
-        "id":"4",
-        "name":"Basines & Vanities",
-        "parent_id":"Bathroom"
+        "id":"floor",
+        "name":"Floors, Walls & Ceilings",
+        "parent_id":"0"
+    },
+    {
+        "id":"kitch",
+        "name":"Kitchen",
+        "parent_id":"0"
+    },
+    {
+        "id":"light",
+        "name":"Lighting & Electrical",
+        "parent_id":"0"
+    },
+    {
+        "id":"secu",
+        "name":"Security Product",
+        "parent_id":"0"
+    },
+    {
+        "id":"win",
+        "name":"Windows & Doors",
+        "parent_id":"0"
+    },
+    {
+        "id":"basins",
+        "name":"Basins & Vanities",
+        "parent_id":"bath"
+    },
+    {
+        "id":"fitting",
+        "name":"Bathroom Fittings",
+        "parent_id":"bath"
+    },
+    {
+        "id":"bath",
+        "name":"Baths",
+        "parent_id":"bath"
+    },
+    {
+        "id":"shower",
+        "name":"Showers",
+        "parent_id":"bath"
+    },
+    {
+        "id":"taps",
+        "name":"Taps & Mixers",
+        "parent_id":"bath"
+    },
+    {
+        "id":"toilet",
+        "name":"Toilets & Bidets",
+        "parent_id":"bath"
+    },
+    {
+        "id":"geyser",
+        "name":"Geysers & Dry Trays",
+        "parent_id":"bore"
+    },
+    {
+        "id":"pipes",
+        "name":"Pipes, Valves & Connector",
+        "parent_id":"bore"
+    },
+    {
+        "id":"pumps",
+        "name":"Pumps & Pressure Gauges",
+        "parent_id":"bore"
+    },
+    {
+        "id":"tank",
+        "name":"Water Tank",
+        "parent_id":"bore"
+    },
+    {
+        "id":"cement",
+        "name":"Cement & Bricks",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"hand",
+        "name":"Hand Tools",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"ladder",
+        "name":"Ladders & Scaffolding",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"other",
+        "name":"Other",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"power",
+        "name":"Power Tools",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"roof",
+        "name":"Roofing & Precasts",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"nail",
+        "name":"Screws, Nails & Fasteners",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"solar",
+        "name":"Solar Panels & Batteries",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"stone",
+        "name":"Stones & Sands",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"timber",
+        "name":"Timber & Boards",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"toolbox",
+        "name":"Toolboxes & Sets",
+        "parent_id":"bldg"
+    },
+    {
+        "id":"floor",
+        "name":"Floor & Wall Tiles",
+        "parent_id":"floor"
+    },
+    {
+        "id":"other",
+        "name":"Other",
+        "parent_id":"floor"
+    },
+    {
+        "id":"paint",
+        "name":"Paint & Brushes",
+        "parent_id":"floor"
+    },
+    {
+        "id":"wallpaper",
+        "name":"Wallpaper",
+        "parent_id":"floor"
+    },
+    {
+        "id":"kitchen",
+        "name":"Complete Kitchens",
+        "parent_id":"kitch"
+    },
+    {
+        "id":"bench",
+        "name":"Countertroops & Benches",
+        "parent_id":"kitch"
+    },
+    {
+        "id":"cupboard",
+        "name":"Kitchen Cupboards",
+        "parent_id":"kitch"
+    },
+    {
+        "id":"kitFitting",
+        "name":"Kitchen Fittings",
+        "parent_id":"kitch"
+    },
+    {
+        "id":"sink",
+        "name":"Kitchen Sinks",
+        "parent_id":"kitch"
+    },
+    {
+        "id":"cable",
+        "name":"Electrical Cables",
+        "parent_id":"light"
+    },
+    {
+        "id":"elecEquip",
+        "name":"Electrical Equipment",
+        "parent_id":"light"
+    },
+    {
+        "id":"light",
+        "name":"Lights",
+        "parent_id":"light"
+    },
+    {
+        "id":"solar",
+        "name":"Solar lights",
+        "parent_id":"light"
+    },
+    {
+        "id":"switch",
+        "name":"Switch & Sockets",
+        "parent_id":"light"
+    },
+    {
+        "id":"alarm",
+        "name":"Alarm Systems & Sensors",
+        "parent_id":"secu"
+    },
+    {
+        "id":"cctv",
+        "name":"CCTV & Security Cameras",
+        "parent_id":"secu"
+    },
+    {
+        "id":"fenc",
+        "name":"Electric Fencing & Barbed Wire",
+        "parent_id":"secu"
+    },
+    {
+        "id":"otherSecurity",
+        "name":"Other Security Products",
+        "parent_id":"secu"
+    },
+    {
+        "id":"secureGate",
+        "name":"Security Gates & Bars",
+        "parent_id":"secu"
+    },
+    {
+        "id":"door",
+        "name":"Door & Door Frames",
+        "parent_id":"win"
+    },
+    {
+        "id":"window",
+        "name":"Windows & Frames",
+        "parent_id":"win"
     }
 ]
