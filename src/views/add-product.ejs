@@ -34,6 +34,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.fd.scss">
 
 </head>
 <body class="animsition">
@@ -681,7 +682,7 @@
                                     <!-- second row -->
                                     <div class="col-sm-6 col-md-4 col-lg-6 p-l-50">
         
-                                        <!-- model -->
+                                        <!-- Building Detail -->
                                         <div class="size-204 respon6-next pb-3">
                                             <div id="" class="rs1-select2 bor8 bg0">
                                                 <select id="bldgDetailSelect" class="js-select2" name="model">
@@ -817,23 +818,16 @@
                                     <!-- first row -->
                                     <div class="col-sm-6 col-md-4 col-lg-6 p-l-50">
         
-                                        <!-- catagory -->
+                                        <!-- title -->
                                         <div class="size-204 respon6-next pb-3">
                                             <div class="rs1-select2 bor8 bg0">
-                                                <select id="property_type" class="js-select2" name="bldgCatagorySelect">
+                                                <select id="property_title" class="js-select2" name="bldgCatagorySelect">
                                                     <option value="" selected disabled>Property Sales & Rentals</option>
-                                                    <option value="" disabled>For Sale</option>
-                                                    <option value="">Appartament for Sale</option>
-                                                    <option value="">Houses for Sale</option>
-                                                    <option value="">Land for Sale</option>
-                                                    <option value="">Rooms for Sale</option>
-                                                    <option value="">Offices for Sale</option>
-                                                    <option value="" disabled>For Rent</option>
-                                                    <option value="">Appartament for Rent</option>
-                                                    <option value="">Houses for Rent</option>
-                                                    <option value="">Land for Rent</option>
-                                                    <option value="">Rooms for Rent</option>
-                                                    <option value="">Offices for Rent   </option>
+                                                    <option value="">Appartament</option>
+                                                    <option value="">Houses</option>
+                                                    <option value="">Land</option>
+                                                    <option value="">Rooms</option>
+                                                    <option value="">Offices</option>
                                                 </select>
                                                 <div class="dropDownSelect2"></div>
                                             </div>
@@ -867,6 +861,19 @@
                         
                                     <!-- second row -->
                                     <div class="col-sm-6 col-md-4 col-lg-6 p-l-50">
+
+                                        <!-- type -->
+
+                                        <div class="size-204 respon6-next pb-3">
+                                            <div class="rs1-select2 bor8 bg0">
+                                                <select id="property_type" class="js-select2" name="bldgCatagorySelect">
+                                                    <option value="" selected disabled>Sales & Rentals</option>
+                                                    <option value="">For Sale</option>
+                                                    <option value="">For Rent</option>
+                                                </select>
+                                                <div class="dropDownSelect2"></div>
+                                            </div>
+                                        </div>
                                         
                                         <!-- location -->
                                         <div class="size-204 respon6-next pb-3">
@@ -1129,6 +1136,18 @@
                                                 <div class="dropDownSelect2"></div>
                                             </div>
                                         </div>
+                                        
+                                        <!-- condition -->
+                                        <div class="size-204 respon6-next pb-3">
+                                            <div id="modelList" class="rs1-select2 bor8 bg0">
+                                                <select id="modelSelect" class="js-select2" name="model">
+                                                    <option value="" >Slightly Used</option>
+                                                    <option value="" >New</option>
+                                                    <option value="" >Used</option>
+                                                </select>
+                                                <div class="dropDownSelect2"></div>
+                                            </div>
+                                        </div>
                                     </div>
         
 
@@ -1137,18 +1156,24 @@
                                     <textarea class="form-control" id="validationTextarea" placeholder="Description"></textarea>
         
                                 </div>
-                                <div class="custom-file p-l-90">
+                                <!-- <div class="custom-file p-l-90">
                                     <input type="file" class="custom-file-input" id="customFile">
                                     <label class="custom-file-label" for="customFile">Photo Upload please Choose File</label>
+                                </div> -->
+
+                                <div>
+                                    <button class="m-t-10 btn btn-primary" type="button" onclick="selectFiles();">
+                                        Upload Photos
+                                    </button>
+                                 
                                 </div>
+
+                                <div id="selected-images"></div>
         
                                 
                                 <div class="m-l-35">
                                     <button class="btn btn-primary  m-t-25" type="submit">Submit form</button>
                                 </div>
-        
-        
-                            
                             </form>
                         </div>
                     </div>
@@ -1334,7 +1359,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		        mainClass: 'mfp-fade'
 		    });
 		});
-	</script>
+    </script>
+
+<!-- image loading -->
+<!--===============================================================================================-->
+    <script src="./vendor/bootstrap/js/bootstrap.fd.js"></script>
+    <script>
+        function selectFiles() {
+
+            window.selectedImages = [];
+ 
+            $.FileDialog({
+                "accept": "image/*"
+            }).on("files.bs.filedialog", function (event) {
+                var html = "";
+                for (var a = 0; a < event.files.length; a++) {
+                    selectedImages.push(event.files[a]);
+                    html += "<img class='img-responsive image-resize' src='" + event.files[a].content + "'>";
+                }
+                document.getElementById("selected-images").innerHTML += html;
+            });
+        }
+
+        
+
+    </script>
 <!--===============================================================================================-->
 	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
 <!--===============================================================================================-->

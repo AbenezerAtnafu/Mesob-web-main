@@ -1,0 +1,76 @@
+{
+    "vechiles": [
+        {
+            "id": "001",
+            "make":"Toyota",
+            "model":"Vitz",
+            "year":"2012",
+            "gear":"manual",
+            "fuel":"desiel",
+            "engine":"2000",
+            "condition":"used",
+            "color":"red",
+            "price":1000000.00,
+            "priceType":0,
+            "location":"Adama",
+            "milleage":100000,
+            "desc":"the car is so awesome",
+            "features":"ABS/Air Conditioning/",
+            "isSold":0,
+            "numOfView":5,
+            "createdAt":"DATE",
+            "updatedAt":"Date"
+        }   
+    ],
+    "bldg":[
+        {
+            "id":"001",
+            "bldgType":"bath",
+            "bldgSubType":"basins",
+            "condition":"used",
+            "price":100.00,
+            "priceType":0,
+            "location":"Adama",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus vulputate hendrerit Praesent faucibus erat vitae rutrum gravida. Vestibulum tempus mi enim, in molestie sem fermentum quis.",
+            "isSold":0,
+            "numOfView":10,
+            "createdAt":"DATE",
+            "updatedAt":"Date"
+        }
+    ],
+    "prop":[
+        {
+            "id":"001",
+            "propName":"apt",
+            "propType":"rent",
+            "location" : "adama",
+            "price":"1000000.00",
+            "priceType":2,
+            "bathrooms":"2",
+            "bedrooms":"2",
+            "propSize":"200",
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus vulputate hendrerit Praesent faucibus erat vitae rutrum gravida. Vestibulum tempus mi enim, in molestie sem fermentum quis.",
+            "isSold":0,
+            "numOfView":10,
+            "createdAt":"DATE",
+            "updatedAt":"Date"
+
+        }
+    ],
+    "mach":[
+        {
+            "id":"001",
+            "machName":"Tractor",
+            "location":"Adama",
+            "condition":"used",
+            "buildYear":"2012",
+            "price":100000.00,
+            "priceType":2,
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus vulputate hendrerit Praesent faucibus erat vitae rutrum gravida. Vestibulum tempus mi enim, in molestie sem fermentum quis.",
+            "isSold":0,
+            "numOfView":200,
+            "createdAt":"DATE",
+            "updatedAt":"Date"  
+        }
+    ]
+}

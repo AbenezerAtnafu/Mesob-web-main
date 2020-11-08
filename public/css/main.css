@@ -2808,12 +2808,12 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 /*---------------------------------------------*/
-.label1 {
+.sold-label {
   position: relative;
 }
 
-.label1::after {
-  content: attr(data-label1);
+.sold-label::after {
+  content: "Sold";
   font-family: Poppins-Regular;
   font-size: 10px;
   line-height: 15px;
@@ -2832,7 +2832,71 @@ input.num-product::-webkit-inner-spin-button {
   background-color: #f74877;
 }
 
-.label1.rs1::after {
+.sold-label.rs1::after {
+  top: calc(50% - 8px);
+  right: auto;
+  left: 90%;
+}
+
+/*---------------------------------------------*/
+
+.available-label {
+  position: relative;
+}
+
+.available-label::after {
+  content: "Available";
+  font-family: Poppins-Regular;
+  font-size: 10px;
+  line-height: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: -9px;
+  height: 15px;
+  min-width: 32px;
+  border-radius: 7px;
+  padding: 0 4px;
+  background-color: #65f748;
+}
+
+.available-label.rs1::after {
+  top: calc(50% - 8px);
+  right: auto;
+  left: 90%;
+}
+
+/*---------------------------------------------*/
+
+.process-label {
+  position: relative;
+}
+
+.process-label::after {
+  content: "In_Process";
+  font-family: Poppins-Regular;
+  font-size: 10px;
+  line-height: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: -9px;
+  height: 15px;
+  min-width: 32px;
+  border-radius: 7px;
+  padding: 0 4px;
+  background-color: #560eff;
+}
+
+.process-label.rs1::after {
   top: calc(50% - 8px);
   right: auto;
   left: 90%;
@@ -3349,4 +3413,11 @@ input.num-product::-webkit-inner-spin-button {
 }
 #login .container #login-row #login-column #login-box #login-form #register-link {
   margin-top: -85px;
+}
+
+.image-resize{
+  height: 380px;
+  object-fit: cover;
+  object-position: center center;
+  padding: 3rem;
 }

@@ -286,11 +286,11 @@
 
 						<div class="filter-col2 p-r-15 p-b-27">
 
-							 <!-- make -->
-							 <div class="size-204 respon6-next pb-3">
-								<div  class="rs1-select2 bor8 bg0">
-									<select id="makeSelect" class="js-select2" name="makeSelect">
-										
+							<!-- catagory -->
+							<div class="size-103 respon6-next pb-3">
+								<div id="modelList" class="rs1-select2 bor8 bg0">
+									<select id="bldgCatagorySelect" class="js-select2" name="bldgCatagorySelect">
+									   
 									</select>
 									<div class="dropDownSelect2"></div>
 								</div>
@@ -300,15 +300,19 @@
 						</div>
 
 						<div class="filter-col3 p-b-27">
-							<!-- model -->
-							<div class="size-204 respon6-next pb-3">
-								<div id="modelList" class="rs1-select2 bor8 bg0">
-									<select id="modelSelect" class="js-select2" name="model">
-										<option value="" selected disabled>Model</option>
+
+							 <!-- Building Detail -->
+							 <div class="size-103 respon6-next pb-3">
+								<div id="" class="rs1-select2 bor8 bg0">
+									<select id="bldgDetailSelect" class="js-select2" name="model">
+										<option value="" selected disabled>Name</option>
 									</select>
 									<div class="dropDownSelect2"></div>
 								</div>
 							</div>
+
+							<div id="warning" class="fa fa-warning mfp-hide text-secondary"> Please Select the name of the building material.</div>
+							 
 						</div>
 					</div>
 				</div>
@@ -318,12 +322,12 @@
 			<div class="row bor19" >
 				<div class="col-sm-5 col-md-5 col-lg-5 block2-pic hov-img0">
 					
-					<a href="product-detail.html" class="hov-img0 how-pos5-parent rs1 " >
-						<img src="images/cars/banner-car-01.jpg" alt="IMG-PRODUCT">
+					<a href="bldg-prod-detail.html" class="hov-img0 how-pos5-parent rs1 " >
+						<img src="images/bldg/bldg-one.jpg" alt="IMG-PRODUCT">
 					
 
 						<!-- post date -->
-						<div class="bor8 flex-col-c-m size-123 bg8 how-pos5 " data-label1="Sold">
+						<div class="bor8 flex-col-c-m size-123 bg8 how-pos5 " data-sold-label="Sold">
 							<span class="ltext-107 cl2 txt-center">
 								22
 							</span>
@@ -339,21 +343,15 @@
 				<div class="col-md-5 col-lg-5 col-sm-5 p-b-30 p-l-50 p-t-20">
 					<div class="p-r-50 p-t-5 p-lr-0-lg">
 						<h4 class="mtext-105 cl2 js-name-detail p-b-14">
-							Make <span class="stext-104">Model</span>
+							Bldg SubType <span class="stext-104">Bldg Type</span>
 						</h4>
 
 						<span class="mtext-106 cl2">
-							ETB 350,000 <span class="stext-102">Negotiable</span><span class="label1 m-l-30" data-label1="Sold"> </span>
+							ETB 350,000 <span class="stext-102">Negotiable</span><span class="sold-label m-l-30" data-sold-label="Sold"> </span>
 						</span>
 
 						<div class="row">
 							<div class="container p-b-3 col-lg-6 col-md-6 col-sm-6">
-								<div class="p-b-5">
-									Transmission: Auto
-								</div>
-								<div class="p-b-5">
-									Build year: 1992
-								</div>
 								<div class="p-b-5">
 									Condition: Used
 								</div>
@@ -647,7 +645,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- script for filter model and made -->
 	<script>
 
-$(document).ready(function(){
+		$(document).ready(function(){
             load_make_json_data('makeSelect');
             load_bldg_json_data('bldgCatagorySelect');
 
@@ -675,10 +673,6 @@ $(document).ready(function(){
                             }
                         }
                         
-
-                        if($("#modelSelect").val() == "Model"){
-                            html_code = "sdgbkbh";
-                        }
                     });
                     $('#'+id).html(html_code);
                 });
@@ -697,27 +691,25 @@ $(document).ready(function(){
             });
 
 
-            // bdlg function
             function load_bldg_json_data(id, parent_id){
                 let html_code = "";
                 $.getJSON('bldg-data.json', function(data){
 
                     if(id=='bldgCatagorySelect'){
-                        html_code += "<option value='' selected disabled>Building Material Catagorey</option>";
+                        html_code += "<option value='' selected disabled>Catagory</option>";
                     }else if(id=='bldgDetailSelect'){
-                        html_code += "<option value='' selected disabled>Building Material Catagorey</option>";
+                        
                     }
 
                     $.each(data, function(key, value){
                         if(id == 'bldgCatagorySelect'){
                             if(value.parent_id == '0'){
-                                html_code += '<option value="'+value.name+'">'+value.name+'</option>';
+                                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
                                 
                             }
                         }else{
                             if(value.parent_id == parent_id){
-                                html_code += '<option value="'+value.name+'">'+value.name+'</option>';
-                                console.log(html_code);
+                                html_code += '<option value="'+value.id+'">'+value.name+'</option>';
                             }
                         }
                     });
@@ -730,6 +722,7 @@ $(document).ready(function(){
                 
                 if(make_name != ''){
                     load_bldg_json_data('bldgDetailSelect', make_name);
+					$('#warning').removeClass('mfp-hide');
                 }
                 else{
                     $('#bldgCatagorySelect').html('<option value="">Select Building Supplies Catagory</option>');
@@ -739,6 +732,7 @@ $(document).ready(function(){
             });
 
         });
+
 
 
 	</script>
