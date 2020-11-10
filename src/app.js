@@ -33,6 +33,10 @@ app.get('/admin-dashboard', function(req,res){
     res.render("admin-dashboard");
 })
 
+app.get('/admin-view-product', function(req,res){
+    res.render("admin-view-product");
+})
+
 app.get('/bldg-prod-detail', function(req,res){
     res.render("bldg-prod-detail");
 })
